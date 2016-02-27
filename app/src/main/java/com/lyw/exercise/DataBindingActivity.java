@@ -1,6 +1,5 @@
 package com.lyw.exercise;
 
-import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +21,6 @@ public class DataBindingActivity extends AppCompatActivity{
     }
 
     public void onClickName(View view) {
-        Toast.makeText(this,"hahaha",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"test",Toast.LENGTH_SHORT).show();
     }
 }
