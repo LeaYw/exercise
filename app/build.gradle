@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.android.databinding'
+
+//andResGuard {
+//    mappingFile = null
+//    use7zip = true
+//    keepRoot = false
+//    // add <yourpackagename>.R.drawable.icon into whitelist.
+//    // because the launcher will get the icon with his name
+//    whiteList = [
+//            "com.lyw.exercise.R.drawable.ic_launcher",
+//            //https://docs.fabric.io/android/crashlytics/build-tools.html
+////            "andresguard.tencent.com.andresguard_example.R.string.com.crashlytics.*"
+//    ]
+//    compressFilePattern = [
+//            "*.png",
+//            "*.jpg",
+//            "*.jpeg",
+//            "*.gif",
+//            "resources.arsc"
+//    ]
+//    zipAlignPath = '/Users/liyawei/Library/Android/sdk/build-tools/23.0.1/zipalign'
+//
+//    sevenZipPath = '/usr/local/bin/7za'
+//}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.lyw.exercise"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+}

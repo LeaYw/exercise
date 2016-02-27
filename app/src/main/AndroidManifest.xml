@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.lyw.exercise"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyw.exercise.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".VpagerFragemetnActivity"
+            android:label="@string/title_activity_vpager_fragemetn"
+            android:parentActivityName=".DisplayMessageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyw.exercise.DisplayMessageActivity"/>
+        </activity>
+        <activity
+            android:name=".GroupRecyclerViewActivity"
+            android:label="@string/title_activity_group_recycler_view"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyw.exercise.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".StatusBarImmersiveActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_status_bar_immersive"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyw.exercise.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".CardViewActivity"
+            android:label="@string/title_activity_card_view"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyw.exercise.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".model.ItemListActivity"
+            android:label="@string/title_item_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyw.exercise.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".model.ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".model.ItemListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyw.exercise.model.ItemListActivity"/>
+        </activity>
+        <activity
+            android:name=".NacigationDrawerActivity"
+            android:label="@string/title_activity_nacigation_drawer"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyw.exercise.MainActivity"/>
+        </activity>
+        <activity android:name=".CustomRadioButtonActivity"/>
+        <activity android:name=".DataBindingActivity">
+        </activity>
+    </application>
+
+</manifest>

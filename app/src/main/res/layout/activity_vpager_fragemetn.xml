@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical"
+			  tools:context="com.lyw.exercise.VpagerFragemetnActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/tv_guide1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:text="特性1"
+			android:textSize="18sp"/>
+
+		<TextView
+			android:id="@+id/tv_guide2"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:text="特性2"
+			android:textSize="18sp"/>
+
+		<TextView
+			android:id="@+id/tv_guide3"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:text="特性3"
+			android:textSize="18sp"/>
+
+		<TextView
+			android:id="@+id/tv_guide4"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:text="特性4"
+			android:textSize="18sp"/>
+
+	</LinearLayout>
+
+	<ImageView
+		android:id="@+id/cursor"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:scaleType="matrix"
+		android:src="@mipmap/cursor"/>
+
+	<android.support.v4.view.ViewPager
+		android:id="@+id/viewpage"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:persistentDrawingCache="animation"
+		/>
+</LinearLayout>
