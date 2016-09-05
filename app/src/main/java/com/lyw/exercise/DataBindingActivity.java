@@ -1,26 +1,30 @@
 package com.lyw.exercise;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
-import com.lyw.exercise.databinding.ActivityDataBindingBinding;
+import com.lyw.exercise.databinding.Custom;
 import com.lyw.exercise.model.User;
 
-public class DataBindingActivity extends AppCompatActivity{
+public class DataBindingActivity extends AppCompatActivity {
+    private Custom binding;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityDataBindingBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_data_binding);
-        User user = new User("test test",11);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
+        user = new User("sdlkfjlds", 12);
         binding.setUser(user);
         binding.setHandler(this);
     }
 
     public void onClickName(View view) {
-        Toast.makeText(this,"test",Toast.LENGTH_SHORT).show();
+        user.setName("test test");
+        startActivity(new Intent(this,DataBinding2Activity.class));
     }
+
 }

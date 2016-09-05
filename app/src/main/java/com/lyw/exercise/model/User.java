@@ -5,23 +5,17 @@ import android.databinding.Bindable;
 
 import com.lyw.exercise.BR;
 
+
 public class User extends BaseObservable{
+
     private String name;
     private int age;
 
-    public User(){
-
-    }
-
-    public User(String name, int age) {
+    public User(String name,int age){
         this.name = name;
         this.age = age;
     }
 
-    @Bindable
-    public int getAge() {
-        return age;
-    }
     @Bindable
     public String getName() {
         return name;
@@ -32,8 +26,11 @@ public class User extends BaseObservable{
         notifyPropertyChanged(BR.name);
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public void setAge(int age) {
         this.age = age;
-        notifyPropertyChanged(BR.age);
     }
 }

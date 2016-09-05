@@ -87,5 +87,29 @@
         android:onClick="onClick"
         android:text="databinding"/>
 
+    <Button
+        android:id="@+id/test_tab_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?actionBarItemBackground"
+        android:onClick="onClick"
+        android:text="test tab activity"/>
+
+    <Button
+        android:id="@+id/test_flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?actionBarItemBackground"
+        android:onClick="onClick"
+        android:text="test_flow_layout"/>
+
+    <Button
+        android:id="@+id/test_scroll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?actionBarItemBackground"
+        android:onClick="onClick"
+        android:text="test_scroll_top"/>
+
 
 </LinearLayout>

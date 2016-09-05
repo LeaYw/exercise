@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.lyw.exercise.model.ItemDetailActivity;
+import com.lyw.exercise.view.FlowLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,6 +70,17 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.data_binding:
                 startActivity(new Intent(this, DataBindingActivity.class));
+                break;
+            case R.id.test_tab_activity:
+                startActivity(new Intent(this, TestTabActivity.class));
+                break;
+            case R.id.test_flow_layout:
+                startActivity(new Intent(this, FlowLayoutActivity.class));
+                break;
+            case R.id.test_scroll_top:
+                startActivity(new Intent(this, ScrollTopActivity.class));
+                break;
+
         }
     }
 

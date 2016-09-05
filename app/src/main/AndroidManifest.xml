@@ -88,7 +88,29 @@
                 android:value="com.lyw.exercise.MainActivity"/>
         </activity>
         <activity android:name=".CustomRadioButtonActivity"/>
-        <activity android:name=".DataBindingActivity">
+        <activity
+            android:name=".TestTabActivity"
+            android:label="@string/title_activity_test_tab"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".DataBindingActivity"
+            android:label="@string/title_activity_data_binding"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".DataBinding2Activity"
+            android:label="@string/title_activity_data_binding2"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".FlowLayoutActivity"
+            android:label="@string/title_activity_flow_layout"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ScrollTopActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
     </application>
 

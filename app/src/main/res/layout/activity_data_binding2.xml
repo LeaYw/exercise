@@ -2,15 +2,11 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <data class="Custom">
+    <data class="Custom2">
 
         <variable
-            name="handler"
-            type="com.lyw.exercise.DataBindingActivity"/>
-
-        <variable
-            name="user"
-            type="com.lyw.exercise.model.User"/>
+            name="people"
+            type="com.lyw.exercise.model.People"/>
     </data>
 
     <LinearLayout
@@ -22,13 +18,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:onClick="@{handler.onClickName}"
-            android:text="@{user.name}"/>
+            android:text="@{people.name}"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(user.age)}"/>
+            android:text="@{String.valueOf(people.age)}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{people.isMan?"man":"woman"}'/>
     </LinearLayout>
 
 </layout>
