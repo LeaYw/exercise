@@ -38,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toobar);
         setSupportActionBar(toolbar);
         testHtml();
+        testUrlParse();
+    }
+
+    private void testUrlParse() {
+
     }
 
     private void testHtml() {
@@ -79,6 +84,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.test_scroll_top:
                 startActivity(new Intent(this, ScrollTopActivity.class));
+                break;
+            case R.id.test_media:
+                startActivity(new Intent(this, MediaActivity.class));
+                break;
+            case R.id.test_video_view:
+                startActivity(new Intent(this, VideoViewActivity.class));
                 break;
 
         }

@@ -2,35 +2,39 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
+    android:orientation="vertical"
     tools:context=".ScrollTopActivity">
+
+    <TextView
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_light"
+        android:padding="20dp"
+        android:text="sdfaaasdafasdfa"
+        app:layout_behavior="com.lyw.exercise.view.ScrollTopBehavior"/>
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/second"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
+                style="@style/TextAppearance.AppCompat.Display3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="128dp"
-                style="@style/TextAppearance.AppCompat.Display3"
-                android:text="A\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK\nL\nM\nN\nO\nP\nQ\nR\nS\nT\nU\nV\nW\nX\nY\nZ\A\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK\nL\nM\nN\nO\nP\nQ\nR\nS\nT\nU\nV\nW\nX\nY\nZ\A\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK\nL\nM\nN\nO\nP\nQ\nR\nS\nT\nU\nV\nW\nX\nY\nZ\"
-                android:background="@android:color/holo_red_light"/>
+                android:background="@android:color/holo_red_light"
+                android:text="@string/long_msg"/>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
-    <View
-        android:id="@+id/first"
-        android:layout_width="match_parent"
-        android:layout_height="128dp"
-        app:layout_behavior="com.lyw.exercise.view.ScrollTopBehavior"
-        android:background="@android:color/holo_blue_light"/>
 
 </android.support.design.widget.CoordinatorLayout>

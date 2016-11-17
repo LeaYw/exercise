@@ -14,8 +14,6 @@ import com.lyw.exercise.R;
 import com.lyw.exercise.adapter.LevelListAdapter;
 import com.lyw.exercise.model.Level;
 
-import org.json.JSONArray;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -55,7 +53,7 @@ public class LevelFragment extends Fragment {
 		View view = inflater.inflate(R.layout.fragment_level, container, false);
 		final TextView textView = (TextView) view.findViewById(R.id.level_text);
 		textView.setText(levelLinkedList.get(0).getChapter());
-		ListView lv = (ListView) view.findViewById(R.id.lever_listview);
+		ListView lv = (ListView) view.findViewById(R.id.id_stickynavlayout_innerscrollview);
 		lv.setAdapter(new LevelListAdapter(levelLinkedList, getActivity()));
 		lv.setOnScrollListener(new AbsListView.OnScrollListener() {
 			@Override

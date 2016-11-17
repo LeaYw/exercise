@@ -5,13 +5,16 @@ import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.widget.OverScroller;
 
 public class ScrollTopBehavior extends CoordinatorLayout.Behavior<View> {
     int offsetTotal = 0;
     boolean scrolling = false;
+    private OverScroller mScroller;
 
     public ScrollTopBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mScroller = new OverScroller(context);
     }
 
     @Override
@@ -24,14 +27,14 @@ public class ScrollTopBehavior extends CoordinatorLayout.Behavior<View> {
 //        offset(child, dyConsumed);
         Log.e("dddd", dxConsumed + "---" + target.getScrollY() + "---" + child.getHeight());
         if (dyConsumed > 0) {//往上滑
-            offset(child, dyConsumed);
-//            if (target.getScrollY()>child.getHeight()){
-//                //没有顶住child
+//            offset(child, dyConsumed);
+            if (target.getScrollY() > child.getHeight()) {
+                //没有顶住child
 //                offset(child,dyConsumed);
-//            } else {
-//                //顶住child
-//                offset(child,dyConsumed);
-//            }
+            } else {
+                //顶住child
+                offset(child, dyConsumed);
+            }
 
         } else {//往下滑
             if (target.getScrollY() > child.getHeight()) {
@@ -43,15 +46,21 @@ public class ScrollTopBehavior extends CoordinatorLayout.Behavior<View> {
             }
         }
     }
-    private boolean isFling = false;
+
+    @Override
+    public boolean onNestedPreFling(CoordinatorLayout coordinatorLayout, View child, View target, float velocityX, float velocityY) {
+        if (target.getScrollY() > child.getHeight()) return false;
+        fling(target.getScrollY(), child.getHeight(), (int) velocityY);
+        return true;
+    }
 
     @Override
     public boolean onNestedFling(CoordinatorLayout coordinatorLayout, View child, View target, float velocityX, float velocityY, boolean consumed) {
-        if (velocityY<0/* && target.ge*/){
-            offset(child,-child.getHeight());
-        }
-        Log.e("dddd", "dddd" + velocityY);
-        return true;
+        return false;
+    }
+
+    private void fling(int scrollY, int mTopViewHeight, int velocityY) {
+        mScroller.fling(0, scrollY, 0, velocityY, 0, 0, 0, mTopViewHeight);
     }
 
     public void offset(View child, int dy) {

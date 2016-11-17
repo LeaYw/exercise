@@ -33,83 +33,107 @@
             android:text="@string/button_send"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/test_html"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"/>
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/group_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?actionBarItemBackground"
-        android:onClick="onClick"
-        android:text="group recyclerview"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/status_immersive"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?actionBarItemBackground"
-        android:onClick="onClick"
-        android:text="stutas bar_immersive"/>
+            <TextView
+                android:id="@+id/test_html"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"/>
 
-    <Button
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?actionBarItemBackground"
-        android:onClick="onClick"
-        android:text="card_view"/>
+            <Button
+                android:id="@+id/group_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="group recyclerview"/>
 
-    <Button
-        android:id="@+id/material_flow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?actionBarItemBackground"
-        android:onClick="onClick"
-        android:text="material_flow"/>
+            <Button
+                android:id="@+id/status_immersive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="stutas bar_immersive"/>
 
-    <Button
-        android:id="@+id/navigation_drawer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?actionBarItemBackground"
-        android:onClick="onClick"
-        android:text="navigation_drawer"/>
+            <Button
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="card_view"/>
 
-    <Button
-        android:id="@+id/data_binding"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?actionBarItemBackground"
-        android:onClick="onClick"
-        android:text="databinding"/>
+            <Button
+                android:id="@+id/material_flow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="material_flow"/>
 
-    <Button
-        android:id="@+id/test_tab_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?actionBarItemBackground"
-        android:onClick="onClick"
-        android:text="test tab activity"/>
+            <Button
+                android:id="@+id/navigation_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="navigation_drawer"/>
 
-    <Button
-        android:id="@+id/test_flow_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?actionBarItemBackground"
-        android:onClick="onClick"
-        android:text="test_flow_layout"/>
+            <Button
+                android:id="@+id/data_binding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="databinding"/>
 
-    <Button
-        android:id="@+id/test_scroll_top"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?actionBarItemBackground"
-        android:onClick="onClick"
-        android:text="test_scroll_top"/>
+            <Button
+                android:id="@+id/test_tab_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="test tab activity"/>
 
+            <Button
+                android:id="@+id/test_flow_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="test_flow_layout"/>
 
+            <Button
+                android:id="@+id/test_scroll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="test_scroll_top"/>
+
+            <Button
+                android:id="@+id/test_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="test_media"/>
+            <Button
+                android:id="@+id/test_video_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="test_video_view"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
