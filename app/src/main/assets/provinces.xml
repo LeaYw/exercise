@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <Address ID="1" Name="北京市" PID="0"/>
+    <Address ID="2" Name="天津市" PID="0"/>
+    <Address ID="3" Name="河北省" PID="0"/>
+    <Address ID="4" Name="山西省" PID="0"/>
+    <Address ID="5" Name="内蒙古自治区" PID="0"/>
+    <Address ID="6" Name="辽宁省" PID="0"/>
+    <Address ID="7" Name="吉林省" PID="0"/>
+    <Address ID="8" Name="黑龙江省" PID="0"/>
+    <Address ID="9" Name="上海市" PID="0"/>
+    <Address ID="10" Name="江苏省" PID="0"/>
+    <Address ID="11" Name="浙江省" PID="0"/>
+    <Address ID="12" Name="安徽省" PID="0"/>
+    <Address ID="13" Name="福建省" PID="0"/>
+    <Address ID="14" Name="江西省" PID="0"/>
+    <Address ID="15" Name="山东省" PID="0"/>
+    <Address ID="16" Name="河南省" PID="0"/>
+    <Address ID="17" Name="湖北省" PID="0"/>
+    <Address ID="18" Name="湖南省" PID="0"/>
+    <Address ID="19" Name="广东省" PID="0"/>
+    <Address ID="20" Name="广西壮族自治区" PID="0"/>
+    <Address ID="21" Name="海南省" PID="0"/>
+    <Address ID="22" Name="重庆市" PID="0"/>
+    <Address ID="23" Name="四川省" PID="0"/>
+    <Address ID="24" Name="贵州省" PID="0"/>
+    <Address ID="25" Name="云南省" PID="0"/>
+    <Address ID="26" Name="西藏自治区" PID="0"/>
+    <Address ID="27" Name="陕西省" PID="0"/>
+    <Address ID="28" Name="甘肃省" PID="0"/>
+    <Address ID="29" Name="青海省" PID="0"/>
+    <Address ID="30" Name="宁夏回族自治区" PID="0"/>
+    <Address ID="31" Name="新疆维吾尔自治区" PID="0"/>
+    <Address ID="32" Name="香港特别行政区" PID="0"/>
+    <Address ID="33" Name="澳门特别行政区" PID="0"/>
+    <Address ID="34" Name="台湾省" PID="0"/>
+
+</resources>

@@ -134,6 +134,20 @@
                 android:background="?actionBarItemBackground"
                 android:onClick="onClick"
                 android:text="test_video_view"/>
+            <Button
+                android:id="@+id/test_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="test_address"/>
+            <Button
+                android:id="@+id/test_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="test_settings"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
