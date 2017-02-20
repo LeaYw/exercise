@@ -142,6 +142,13 @@
                 android:onClick="onClick"
                 android:text="test_address"/>
             <Button
+                android:id="@+id/test_telephone_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="test_telephone_manager"/>
+            <Button
                 android:id="@+id/test_settings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

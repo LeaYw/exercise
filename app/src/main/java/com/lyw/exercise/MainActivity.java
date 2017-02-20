@@ -1,20 +1,18 @@
 package com.lyw.exercise;
 
-import android.content.ComponentName;
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.Settings;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.telephony.TelephonyManager;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.AbsoluteSizeSpan;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +20,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lyw.exercise.Utils.TimeUtils;
 import com.lyw.exercise.model.Address;
 import com.lyw.exercise.model.ItemDetailActivity;
 
@@ -48,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 		setSupportActionBar(toolbar);
 		testHtml();
 		testUrlParse();
+		TimeUtils.getNextMonthTime();
 	}
 
 	static class MyHandler extends Handler{
@@ -109,6 +109,32 @@ public class MainActivity extends AppCompatActivity {
 				break;
 			case R.id.test_address:
 				startActivity(new Intent(this, AddressActivity.class));
+				break;
+			case R.id.test_telephone_manager:
+				TelephonyManager manager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+				Log.e("SoftwareVersion",manager.getDeviceSoftwareVersion());
+				Log.e("getDeviceId",manager.getDeviceId());
+				Log.e("getPhoneType",manager.getPhoneType()+"");
+				Log.e("getNetworkOperatorName",manager.getNetworkOperatorName());
+				Log.e("getNetworkOperator",manager.getNetworkOperator());
+				Log.e("isNetworkRoaming",manager.isNetworkRoaming()+"");
+				Log.e("getNetworkCountryIso",manager.getNetworkCountryIso());
+				Log.e("getNetworkType",manager.getNetworkType()+"");
+				Log.e("getSimState",manager.getSimState()+"");
+				Log.e("getSimOperator",manager.getSimOperator());
+				Log.e("getSimOperatorName",manager.getSimOperatorName());
+				Log.e("getSimCountryIso",manager.getSimCountryIso());
+				Log.e("getSimSerialNumber",manager.getSimSerialNumber());
+				Log.e("getSubscriberId",manager.getSubscriberId());
+				Log.e("getGroupIdLevel1",manager.getGroupIdLevel1());
+				Log.e("getLine1Number",manager.getLine1Number());
+//				Log.e("dddddddd",manager.getVoiceMailNumber());
+				Log.e("getVoiceMailAlphaTag",manager.getVoiceMailAlphaTag());
+				Log.e("getCallState",manager.getCallState()+"");
+				Log.e("getDataActivity",manager.getDataActivity()+"");
+				Log.e("getDataState",manager.getDataState()+"");
+				Log.e("getMmsUserAgent",manager.getMmsUserAgent()+"");
+				Log.e("getMmsUAProfUrl",manager.getMmsUAProfUrl());
 				break;
 			case R.id.test_settings:
 //				Intent intent = new Intent(Settings.ACTION_SECURITY_SETTINGS);
