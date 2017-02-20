@@ -1,4 +1,4 @@
-package com.lyw.exercise.Utils;
+package com.lyw.exercise.utils;
 
 import android.util.Log;
 

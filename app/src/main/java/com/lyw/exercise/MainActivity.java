@@ -20,7 +20,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lyw.exercise.Utils.TimeUtils;
+import com.lyw.exercise.utils.TimeUtils;
 import com.lyw.exercise.model.Address;
 import com.lyw.exercise.model.ItemDetailActivity;
 
@@ -176,7 +176,10 @@ public class MainActivity extends AppCompatActivity {
 //				}
 //				startActivity(localIntent);
 				break;
-
+			case R.id.test_input_method_manager:
+				Intent intent = new Intent(this,InputMethodManagerActivity.class);
+				startActivity(intent);
+				break;
 		}
 	}
 
