@@ -131,6 +131,8 @@
         </activity>
         <activity android:name=".UiModeManagerActivity">
         </activity>
+        <activity android:name=".DownloadManagerActivity">
+        </activity>
     </application>
 
 </manifest>

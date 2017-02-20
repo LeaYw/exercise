@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 		TimeUtils.getNextMonthTime();
 	}
 
-	static class MyHandler extends Handler{
+	static class MyHandler extends Handler {
 		@Override
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
@@ -112,29 +112,29 @@ public class MainActivity extends AppCompatActivity {
 				break;
 			case R.id.test_telephone_manager:
 				TelephonyManager manager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
-				Log.e("SoftwareVersion",manager.getDeviceSoftwareVersion());
-				Log.e("getDeviceId",manager.getDeviceId());
-				Log.e("getPhoneType",manager.getPhoneType()+"");
-				Log.e("getNetworkOperatorName",manager.getNetworkOperatorName());
-				Log.e("getNetworkOperator",manager.getNetworkOperator());
-				Log.e("isNetworkRoaming",manager.isNetworkRoaming()+"");
-				Log.e("getNetworkCountryIso",manager.getNetworkCountryIso());
-				Log.e("getNetworkType",manager.getNetworkType()+"");
-				Log.e("getSimState",manager.getSimState()+"");
-				Log.e("getSimOperator",manager.getSimOperator());
-				Log.e("getSimOperatorName",manager.getSimOperatorName());
-				Log.e("getSimCountryIso",manager.getSimCountryIso());
-				Log.e("getSimSerialNumber",manager.getSimSerialNumber());
-				Log.e("getSubscriberId",manager.getSubscriberId());
-				Log.e("getGroupIdLevel1",manager.getGroupIdLevel1());
-				Log.e("getLine1Number",manager.getLine1Number());
+				Log.e("SoftwareVersion", manager.getDeviceSoftwareVersion());
+				Log.e("getDeviceId", manager.getDeviceId());
+				Log.e("getPhoneType", manager.getPhoneType() + "");
+				Log.e("getNetworkOperatorName", manager.getNetworkOperatorName());
+				Log.e("getNetworkOperator", manager.getNetworkOperator());
+				Log.e("isNetworkRoaming", manager.isNetworkRoaming() + "");
+				Log.e("getNetworkCountryIso", manager.getNetworkCountryIso());
+				Log.e("getNetworkType", manager.getNetworkType() + "");
+				Log.e("getSimState", manager.getSimState() + "");
+				Log.e("getSimOperator", manager.getSimOperator());
+				Log.e("getSimOperatorName", manager.getSimOperatorName());
+				Log.e("getSimCountryIso", manager.getSimCountryIso());
+				Log.e("getSimSerialNumber", manager.getSimSerialNumber());
+				Log.e("getSubscriberId", manager.getSubscriberId());
+				Log.e("getGroupIdLevel1", manager.getGroupIdLevel1());
+				Log.e("getLine1Number", manager.getLine1Number());
 //				Log.e("dddddddd",manager.getVoiceMailNumber());
-				Log.e("getVoiceMailAlphaTag",manager.getVoiceMailAlphaTag());
-				Log.e("getCallState",manager.getCallState()+"");
-				Log.e("getDataActivity",manager.getDataActivity()+"");
-				Log.e("getDataState",manager.getDataState()+"");
-				Log.e("getMmsUserAgent",manager.getMmsUserAgent()+"");
-				Log.e("getMmsUAProfUrl",manager.getMmsUAProfUrl());
+				Log.e("getVoiceMailAlphaTag", manager.getVoiceMailAlphaTag());
+				Log.e("getCallState", manager.getCallState() + "");
+				Log.e("getDataActivity", manager.getDataActivity() + "");
+				Log.e("getDataState", manager.getDataState() + "");
+				Log.e("getMmsUserAgent", manager.getMmsUserAgent() + "");
+				Log.e("getMmsUAProfUrl", manager.getMmsUAProfUrl());
 				break;
 			case R.id.test_settings:
 //				Intent intent = new Intent(Settings.ACTION_SECURITY_SETTINGS);
@@ -177,12 +177,13 @@ public class MainActivity extends AppCompatActivity {
 //				startActivity(localIntent);
 				break;
 			case R.id.test_input_method_manager:
-				Intent intent = new Intent(this,InputMethodManagerActivity.class);
-				startActivity(intent);
+				startActivity(new Intent(this, InputMethodManagerActivity.class));
 				break;
 			case R.id.test_ui_mode_manager:
-				Intent i = new Intent(this,UiModeManagerActivity.class);
-				startActivity(i);
+				startActivity(new Intent(this, UiModeManagerActivity.class));
+				break;
+			case R.id.test_download_manager:
+				startActivity(new Intent(this, DownloadManagerActivity.class));
 				break;
 		}
 	}
