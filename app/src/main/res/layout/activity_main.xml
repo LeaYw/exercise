@@ -162,6 +162,13 @@
                 android:background="?actionBarItemBackground"
                 android:onClick="onClick"
                 android:text="test_input_method_manager"/>
+            <Button
+                android:id="@+id/test_ui_mode_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="test_ui_mode_manager"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

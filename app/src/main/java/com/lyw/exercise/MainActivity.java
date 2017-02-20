@@ -180,6 +180,10 @@ public class MainActivity extends AppCompatActivity {
 				Intent intent = new Intent(this,InputMethodManagerActivity.class);
 				startActivity(intent);
 				break;
+			case R.id.test_ui_mode_manager:
+				Intent i = new Intent(this,UiModeManagerActivity.class);
+				startActivity(i);
+				break;
 		}
 	}
 

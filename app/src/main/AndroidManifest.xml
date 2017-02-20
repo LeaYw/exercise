@@ -129,6 +129,8 @@
         </activity>
         <activity android:name=".InputMethodManagerActivity">
         </activity>
+        <activity android:name=".UiModeManagerActivity">
+        </activity>
     </application>
 
 </manifest>
