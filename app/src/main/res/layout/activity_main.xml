@@ -176,6 +176,13 @@
                 android:background="?actionBarItemBackground"
                 android:onClick="onClick"
                 android:text="test_download_manager"/>
+            <Button
+                android:id="@+id/test_aidl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?actionBarItemBackground"
+                android:onClick="onClick"
+                android:text="test_aidl"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

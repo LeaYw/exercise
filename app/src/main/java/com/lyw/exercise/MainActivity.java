@@ -1,9 +1,14 @@
 package com.lyw.exercise;
 
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Message;
+import android.os.RemoteException;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
@@ -20,6 +25,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lyw.exercise.aidl.IMyAidlInterface;
 import com.lyw.exercise.utils.TimeUtils;
 import com.lyw.exercise.model.Address;
 import com.lyw.exercise.model.ItemDetailActivity;
@@ -28,6 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+	private static final String TAG = "MainActivity";
 
 	public static final String EXTRA_MESSAGE = "EXTRA_MESSAGE";
 	private List<Address> list = new ArrayList<>();
@@ -48,13 +55,6 @@ public class MainActivity extends AppCompatActivity {
 		testHtml();
 		testUrlParse();
 		TimeUtils.getNextMonthTime();
-	}
-
-	static class MyHandler extends Handler {
-		@Override
-		public void handleMessage(Message msg) {
-			super.handleMessage(msg);
-		}
 	}
 
 	private void testUrlParse() {
@@ -185,8 +185,40 @@ public class MainActivity extends AppCompatActivity {
 			case R.id.test_download_manager:
 				startActivity(new Intent(this, DownloadManagerActivity.class));
 				break;
+			case R.id.test_aidl:
+				startAndBindService();
+				break;
 		}
 	}
+
+	//AIDL start
+	private IMyAidlInterface aidlInterface;
+
+	private ServiceConnection serviceConnection = new ServiceConnection() {
+		@Override
+		public void onServiceConnected(ComponentName name, IBinder service) {
+			aidlInterface = IMyAidlInterface.Stub.asInterface(service);
+			Log.e(TAG, "onServiceConnected");
+			try {
+				String s = aidlInterface.getInfo("hahaha");
+				Log.e(TAG, s);
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
+		}
+
+		@Override
+		public void onServiceDisconnected(ComponentName name) {
+
+		}
+	};
+
+	private void startAndBindService() {
+		Intent intent = new Intent(MainActivity.this, AidlService.class);
+		bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+	}
+
+	//AIDL end
 
 	public void sendMessage(View view) {
 		Intent intent = new Intent(this, DisplayMessageActivity.class);

@@ -133,6 +133,11 @@
         </activity>
         <activity android:name=".DownloadManagerActivity">
         </activity>
+
+        <service
+                android:name=".AidlService"
+                android:process="com.lyw.exercise.remote">
+        </service>
     </application>
 
 </manifest>
